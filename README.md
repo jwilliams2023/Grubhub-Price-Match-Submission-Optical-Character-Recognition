@@ -1,6 +1,6 @@
 This is a Grubhub price match guarantee website automation. It decreases the time needed to submit your proof of a lower-price cart found elsewhere.
 
-When you run this script it will look this this:
+When you run this script it will look similar to this:
 
 ![](https://github.com/jwilliams2023/Grubhub-Price-Match-Submission-OCR/blob/master/Resources/DemoVideo.gif)
 
