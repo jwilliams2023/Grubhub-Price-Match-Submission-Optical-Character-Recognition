@@ -57,7 +57,7 @@ If you'd like to contribute to this project:
 5. Open a Pull Request
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jwilliams2023/Grubhub-Price-Match-Submission-OCR?tab=MIT-1-ov-file#readme) file for details.
 
 ## Contact
 For any inquiries, feel free to reach out via [williams.joe3102@gmail.com](mailto:williams.joe3102@gmail.com).
