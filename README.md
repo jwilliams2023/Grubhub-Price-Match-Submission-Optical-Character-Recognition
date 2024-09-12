@@ -3,11 +3,41 @@
 ## Overview
 This is a **Grubhub Price Match Guarantee** website automation script that decreases the time needed to submit proof of a lower-price cart found elsewhere.
 
+The script leverages **Tesseract OCR** to automatically extract text from images of lower-price carts, which users submit as proof for the price match guarantee. With OCR, the system can read and interpret the contents of the cart images, eliminating the need for manual entry.
+
+Tesseract OCR, powered by AI techniques such as machine learning, enhances the script’s ability to accurately recognize and extract text, even from images of varying quality. This AI capability allows the script to handle different fonts, image conditions, and layouts efficiently.
+
 When you run this script, it will look similar to this:
 
 ![Demo Video](https://github.com/jwilliams2023/Grubhub-Price-Match-Submission-OCR/blob/master/Resources/DemoVideo.gif)
 
 *Note: At the end of the GIF, I manually submitted the image proof, but there is a line of code that just needs to be uncommented to auto-submit. I keep it commented out since I want to be 100% sure everything is accurate.*
+
+## How OCR, AI, and Image Preprocessing Help
+
+Using **Tesseract OCR**, this script can read and extract text from the images of cart prices that you submit. OCR technology converts the text in these images into machine-readable data, allowing the automation process to fill in the necessary information without you having to type it manually.
+
+### Image Preprocessing and Normalization
+To improve the accuracy of text extraction, we implemented **image preprocessing** techniques such as:
+
+1. **Resizing**: Images are resized to 33% of their original dimensions to optimize text detection. Smaller image sizes help OCR engines process the text more efficiently.
+
+2. **Contrast Enhancement**: A contrast filter is applied to enhance the visibility of the text in the images. By improving contrast, the text becomes clearer, making it easier for Tesseract to recognize.
+
+3. **Black and White Conversion**: The images are converted to black-and-white (binary) format. This reduces noise and makes the text stand out from the background, further improving recognition.
+
+4. **Inversion (Negative Image)**: For some images, inverting the color values (creating a negative) can make the text easier to read, especially when dealing with light text on dark backgrounds.
+
+These preprocessing steps ensure that the text is more readable and suitable for OCR, significantly improving the recognition accuracy.
+
+### Using Tesseract with Different Configurations
+We used **Tesseract’s LSTM-based OCR Engine** with the following configuration for optimal results:
+- **OEM (OCR Engine Mode)**: We used OEM 1, which enables the LSTM neural network-based OCR engine.
+- **PSM (Page Segmentation Mode)**: PSM 4 was chosen to detect text within image regions that are formatted in columns or lines.
+
+We also experimented with different image versions (original, resized, contrasted, black-and-white, and inverted) to extract text. By concatenating the recognized text from all versions, we ensure that no important information is missed.
+
+Tesseract’s AI-powered capabilities allow it to recognize text in various image conditions, making the price match submission process faster and more reliable.
 
 ## Requirements
 Several modules and libraries are required to run the script:
