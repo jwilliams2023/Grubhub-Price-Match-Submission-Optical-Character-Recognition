@@ -5,7 +5,7 @@ This is a **Grubhub Price Match Guarantee** website automation script that decre
 
 The script leverages Google's **Tesseract OCR** Python library to automatically extract text from images of lower-price carts, which users submit as proof for the price match guarantee. With OCR, the system can read and interpret the contents of the cart images, eliminating the need for manual entry.
 
-Tesseract uses machine learning to enhance the script’s ability to accurately recognize and extract text, even from images of varying quality. This AI capability allows the script to handle different fonts, image conditions, and layouts efficiently.
+Tesseract uses machine learning, specifically recurrent neural networks (RNN's), to enhance the script’s ability to accurately recognize and extract text, even from images of varying quality. This ML capability allows the script to handle different fonts, image conditions, and layouts efficiently.
 
 When you run this script, it will look similar to this:
 
